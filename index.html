@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>budget app</h1>
+      <div class="income-container">
+        <div class="form-container top">
+          <form class="income-form">
+            <h4>please enter your budget</h4>
+            <input type="number" class="budget-amount" />
+            <button class="add-budget">calculate</button>
+          </form>
+        </div>
+        <div class="totals-container">
+          <div class="total-container">
+            <h2>budget</h2>
+            <span class="icon"><i class="fa-solid fa-money-bill-1"></i></span>
+            <p class="budget-total"></p>
+          </div>
+          <div class="total-container">
+            <h2>expenses</h2>
+            <span class="icon"><i class="fa-solid fa-credit-card"></i></span>
+            <p class="expenses-total"></p>
+          </div>
+          <div class="total-container">
+            <h2>balance</h2>
+            <span class="icon"><i class="fa-solid fa-dollar-sign"></i></span>
+            <p class="balance-total"></p>
+          </div>
+        </div>
+      </div>
+      <div class="expense-container">
+        <div class="form-container bottom">
+          <form class="expense-form">
+            <h4>please enter expense item</h4>
+            <input type="text" class="expense-item" />
+            <h4>please enter expense amount</h4>
+            <input type="text" class="expense-amount" />
+            <button class="add-expense">add expense</button>
+          </form>
+        </div>
+        <div class="detailed-expenses-container">
+          <div class="expense-titles">
+            <h4 class="expense-title">expense item</h4>
+            <h4 class="expense-title">expense value($)</h4>
+          </div>
+          <div class="list-of-expenses">
+            <!-- <div class="item-list">
+              <div class="exp-item">tea</div>
+              <div class="exp-value">40</div>
+              <div class="edit-btn">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </div>
+              <div class="delete-btn"><i class="fa-solid fa-trash"></i></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden">
+      <div class="overlay-form-container">
+        <form class="overlay-form">
+          <h4>edit item</h4>
+          <input type="text" class="edit-expense-item" />
+          <h4>edit amount</h4>
+          <input type="number" class="edit-expense-amount" />
+          <button class="finish-edit">done</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

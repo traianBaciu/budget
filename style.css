@@ -1,0 +1,197 @@
+:root {
+  --main-bg-color: #c2cae8;
+  --budget-strong: #3f826d;
+  --budget-light: #a1e8af;
+  --exp-strong: #f21b3f;
+  --exp-light: #fcbfb7;
+  --font-color: #181f1c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  text-align: center;
+  color: var(--font-color);
+  background-color: var(--main-bg-color);
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.income-container,
+.expense-container {
+  display: flex;
+}
+/* income */
+.income-container {
+  background-color: var(--budget-light);
+}
+.add-budget {
+  border: 2px solid var(--budget-strong);
+}
+.add-budget:hover {
+  box-shadow: inset -0 -0 5px 5px var(--budget-light);
+}
+.top {
+  border: 2px solid var(--budget-strong);
+}
+.totals-container {
+  border: 2px solid var(--budget-strong);
+  border-left: 0;
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+}
+.total-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  flex: 1;
+}
+.total-container p {
+  font-size: 32px;
+  margin-top: 10px;
+  font-weight: 900;
+}
+.icon {
+  font-size: 50px;
+  color: blue;
+}
+.budget-total {
+  color: var(--budget-strong);
+}
+.expenses-total {
+  color: var(--exp-strong);
+}
+
+/* expenses */
+.expense-container {
+  flex: 1;
+  border: 2px solid var(--exp-strong);
+  background-color: var(--exp-light);
+}
+.form-container {
+  flex: 1;
+}
+.bottom {
+  border-right: 2px solid var(--exp-strong);
+}
+.add-expense {
+  border: 2px solid var(--exp-strong);
+}
+.add-expense:hover {
+  box-shadow: inset -0 -0 5px 5px var(--exp-light);
+}
+.detailed-expenses-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-titles {
+  display: flex;
+}
+.expense-title {
+  flex-basis: 40%;
+}
+
+.list-of-expenses {
+  display: flex;
+  font-size: 24px;
+  font-weight: bolder;
+  flex-direction: column;
+}
+
+.item-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.list-of-expenses i {
+  cursor: pointer;
+}
+.exp-item,
+.exp-value {
+  flex-basis: 40%;
+  color: var(--exp-strong);
+}
+.edit-btn {
+  color: var(--budget-strong);
+  flex-basis: 10%;
+}
+.delete-btn {
+  color: var(--exp-strong);
+  flex-basis: 10%;
+}
+
+/* general */
+form {
+  display: flex;
+  flex-direction: column;
+}
+h1,
+h2 {
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+h4 {
+  margin: 15px 0;
+  text-transform: capitalize;
+}
+button {
+  width: 50%;
+  margin: 15px auto;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 10px;
+}
+button:hover {
+  transform: scale(1.1);
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+}
+input {
+  width: 80%;
+  margin: 15px auto;
+  line-height: 30px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+/* overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+}
+.overlay-form {
+  border: 2px solid var(--budget-strong);
+  border-radius: 10px;
+  background-color: var(--exp-light);
+}
+.finish-edit {
+  border: 2px solid var(--budget-strong);
+}
+.finish-edit:hover {
+  box-shadow: inset -0 -0 5px 5px var(--budget-light);
+}
+
+.hidden {
+  display: none;
+}
